@@ -1,0 +1,78 @@
+@import "../../../variables";
+
+.overlay-container {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+
+  .toast-icon {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light);
+    columns: var(--color-dark);
+
+    .action-button {
+      font-size: 150%;
+    }
+
+    &.info {
+      background-color: var(--color-info);
+    }
+
+    &.danger {
+      background-color: var(--color-danger);
+      color: var(--color-light);
+    }
+
+    &.success {
+      background-color: var(--color-success);
+    }
+  }
+
+  .toast-open {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 20px;
+
+    .message-box {
+      width: 100%;
+      border-radius: 10px;
+      color: var(--color-dark);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 35px;
+      margin: 10px;
+
+      &.info {
+        background-color: var(--color-info);
+      }
+
+      &.danger {
+        background-color: var(--color-danger);
+        color: var(--color-light);
+      }
+
+      &.success {
+        background-color: var(--color-success);
+      }
+
+      .action-button {
+        border-right: 5px;
+      }
+    }
+  }
+}
+
+.action-button {
+  color: inherit;
+  background-color: inherit;
+  border: none;
+}

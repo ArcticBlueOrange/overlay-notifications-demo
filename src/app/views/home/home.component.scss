@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+button {
+  &.info-toast {
+    background-color: var(--color-info);
+  }
+  &.succ-toast {
+    background-color: var(--color-success);
+  }
+  &.dang-toast {
+    background-color: var(--color-danger);
+  }
+}

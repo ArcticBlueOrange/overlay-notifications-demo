@@ -1,0 +1,32 @@
+<div
+  class="overlay-container"
+  *ngIf="messages.length"
+  >
+  <div
+    class="toast-icon"
+    [ngClass]="toastClass()"
+    >
+    <button
+      (click)="toggleOpen()"
+      class="action-button"
+      >
+      {{this.messages.length}}
+    </button>
+  </div>
+  <div
+    class="toast-open"
+    *ngIf="open"
+    >
+    <p
+      *ngFor="let message of messages; let i=index"
+      class="message-box"
+      [ngClass]="message.classes"
+      >
+      {{message.content}}
+      <button
+        (click)="dismiss(i)"
+        class="action-button"
+        >x</button>
+    </p>
+  </div>
+</div>
