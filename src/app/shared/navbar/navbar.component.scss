@@ -1,12 +1,11 @@
 @import "../../../variables";
 
 nav {
-  position: sticky;
-  width: 100%;
-  height: 2.5em;
   background-color: var(--color-dark);
-  display: flex;
-  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: auto;
 
   ul {
     list-style-type: none;

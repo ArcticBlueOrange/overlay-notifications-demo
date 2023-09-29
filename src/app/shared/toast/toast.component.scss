@@ -17,9 +17,13 @@
     justify-content: center;
     background-color: var(--color-light);
     columns: var(--color-dark);
+    box-shadow: 2px 2px 5px var(--color-dark);
 
-    .action-button {
-      font-size: 150%;
+    &:hover {
+      outline-style: solid;
+      outline-color: transparent;
+      box-shadow: inset 2px 2px 5px var(--color-light);
+      size: 200%;
     }
 
     &.info {
@@ -34,6 +38,10 @@
     &.success {
       background-color: var(--color-success);
     }
+
+    .action-button {
+      font-size: 150%;
+    }
   }
 
   .toast-open {
@@ -42,14 +50,33 @@
     margin-right: 20px;
 
     .message-box {
-      width: 100%;
-      border-radius: 10px;
       color: var(--color-dark);
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      height: 35px;
-      margin: 10px;
+      appearance: button;
+      border: solid transparent;
+      border-radius: 30px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 30px;
+      outline: none;
+      overflow: visible;
+      margin: 10px 10px;
+      padding: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 100%;
+      box-shadow: 2px 2px 5px var(--color-dark);
+
+      transition: all 1s;
+
+      &:hover {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: inset 2px 2px 5px var(--color-light);
+        size: 200%;
+      }
 
       &.info {
         background-color: var(--color-info);
@@ -65,7 +92,10 @@
       }
 
       .action-button {
+        position: relative;
         border-right: 5px;
+        margin-right: 0;
+        cursor: pointer;
       }
     }
   }
