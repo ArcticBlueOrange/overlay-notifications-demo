@@ -13,15 +13,21 @@ export class ToastComponent implements OnInit {
   open: boolean = true;
   destroyDelay: number = 5000;
   destroyTimer: any;
+  maxNotifs: number = 15;
 
   constructor(private toast: ToastService) { }
 
   ngOnInit(): void {
+    this.destroyDelay = parseInt(localStorage.getItem('destroyDelay') || '5000');
+    this.maxNotifs = parseInt(localStorage.getItem('maxNotifs') || '15');
     this.toast.getNotifications().subscribe(
       (message) => {
         if (message.content) {
-          this.messages.push(message);
-          this.resetTimer();
+          // this.messages.push(message);
+          this.messages = [...this.messages, message];
+          if (this.messages.length > this.maxNotifs)
+            this.messages = this.messages.slice(1,)
+          this.resetTimer(); // sets a new timer for every message that arrives
         }
       }
     );

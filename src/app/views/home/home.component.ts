@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private toast: ToastService) { }
 
   sendToast(type: string) {
-    console.log(type)
-    this.toast.showNotification(`This is a test ${type} notification`, type)
+    this.toast.showNotification(`This is a test ${type} notification`, type);
   }
 
   ngOnInit(): void {

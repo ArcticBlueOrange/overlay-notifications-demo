@@ -9,8 +9,7 @@ export class NavbarComponent {
 
   links = [
     { name: 'Home', link: 'home', },
-    { name: 'Profile', link: 'profile', },
-    { name: 'Shows', link: 'shows', },
+    { name: 'Settings', link: 'settings', },
   ]
 
 }
