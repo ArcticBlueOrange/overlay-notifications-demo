@@ -1,0 +1,17 @@
+<form formGroupName="settingsForm">
+  <table>
+    <tr>
+      <td> Notification Destruction Delay (seconds) </td>
+      <td> <input type="text" formControlName="destroyDelay"> </td>
+    </tr>
+    <tr>
+      <td> Max Notifications </td>
+      <td> <input type="text" formControlName="maxNotifications"> </td>
+    </tr>
+    <tr>
+      <button type="button" (click)="onSubmit()">
+        Save Settings
+      </button>
+    </tr>
+  </table>
+</form>
